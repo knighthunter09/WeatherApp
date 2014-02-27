@@ -1,0 +1,27 @@
+{>"layouts/master" /}
+
+{<body}
+    <h1>Weather Update Application</h1>		
+		<div>
+		{?cities}
+			<table border="1">
+			<tr>
+				<th>State</th>
+				<th>City</th>
+				<th>Temperature</th>
+				<th>Weather</th>
+			</tr>
+			{#cities}
+			<tr>
+				<td>{.state}</td>
+				<td>{.city}</td>
+				<td>{.temparature}</td>
+				<td>{.weather}</td>
+			</tr>
+			{/cities}
+			</table>
+            {:else}
+                There are no updates available :(
+            {/cities}
+		</div>
+{/body}
